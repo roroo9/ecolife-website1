@@ -40,3 +40,59 @@
   </section>
 </body>
 </html>
+
+<script>
+const `-----BEGIN PUBLIC KEY-----
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnDQhDmvbl2k0/nE6MEnL
+Hxtkc1b5xcCnVUVCXH5yKe936Trd8NsxxFsD917WjnybOdqXO68hnM6N8HDvbv27
+Yk2ehR+N6BerH2qsHXq7WMB8ueAUYwExdhSNHOoDVFOcHu7tzExvnrBlgr+64ATo
+MdkAXC9O7uMfwC0v1OVEDT5eIO+CDJ95p5Yg6Zj5SYuyUOQrXUhxDLwsW4hqUe8e
+/F4friSRPbn0Xj0tNRPHRPBjf2wkdArgIna9zXuuQ772bvFqzmmrzXBIJNlMLMf4
+alx3nzfAgh6T/tZm1yNsEZzg2+8eFmK4t54SHrZ1Z2myWUc25iIz3gFvm7RDJYHg
+/QIDAQAB
+-----END PUBLIC KEY-----
+`;
+
+const `-----BEGIN RSA PRIVATE KEY-----
+MIIEogIBAAKCAQEAnDQhDmvbl2k0/nE6MEnLHxtkc1b5xcCnVUVCXH5yKe936Trd
+8NsxxFsD917WjnybOdqXO68hnM6N8HDvbv27Yk2ehR+N6BerH2qsHXq7WMB8ueAU
+YwExdhSNHOoDVFOcHu7tzExvnrBlgr+64AToMdkAXC9O7uMfwC0v1OVEDT5eIO+C
+DJ95p5Yg6Zj5SYuyUOQrXUhxDLwsW4hqUe8e/F4friSRPbn0Xj0tNRPHRPBjf2wk
+dArgIna9zXuuQ772bvFqzmmrzXBIJNlMLMf4alx3nzfAgh6T/tZm1yNsEZzg2+8e
+FmK4t54SHrZ1Z2myWUc25iIz3gFvm7RDJYHg/QIDAQABAoIBACCe0U1v8FiXH7pI
+PpDhhEH/iDN/FSO7VyabU1+6B1DjIc1K3hkDyYmaQUKKY2+3rXoAQId2DCSxTRqK
+lzH8WoLNt15RJ+MxeCrULdPtMs02y4VMuq0vTVs9sPd6Fk5otIiQOIhq6P+Akn5i
+2F2aoLvyN51Iwujn9RQ+y4egBl1mVp0NCAhs4SA21DVdoOrvlNhCnCoo+EM/Gf2u
+SVKtLjwcBkG4czYvWqYrMCdPQUEuaH8XaDrvCrsl6sGmsiYCOJOfgmOXV6K3gEbU
+kVD7VmBCSKn/2BDEvr6JZHBhbQopF9HeZ9/M7THV4pl7Ns3/Nv5s7zwQCnScmoCS
+KaS5CGECgYEAyz4aPlAbTcJGfXlciBoe8ubEzcp7d77+g/b2Q+DRx9uAeQxWLPq9
+85gxQpq9ilBHJ8GazmUaPynij+C7rH2l944d3dE5Vwhl3BJArXLBqQD3+nU7itwW
+YMjy0IrJYqocrFBpId+eoNNkl26yXqTeW24axGBc5uONsDgQSbrgs6ECgYEAxMAw
+Weqih1BwiYFOsCnYmE44Z0fpv4P4CmuDu7jCTiPSLsCeYdFxw0pIrsB8u0oyD6PW
+ogua+wp6BboIVn5tdL2hqOxEELORWaDKAfD0Eia9QliHC6Y2mOnEUB3062U0+919
+HVKKtO7Xvh8JqYwi03ehTaHAtVNRatSXeIEkb90CgYBTdlhOmJTt1McfxdPS7G8j
+LtNI80rKvPtF9AfjjhJ38VML4p4M8JdKzogEIwmNIDRoRiAte+VQZQHuNcq8Jgke
+5RSsv7u9WuyBeFlpIQQYRBaRmszt1D24Vy0nqKbUxqjptkfGKk+5GbZoXYQQS8Io
+Z8nENRJRmsbXw94keQLHoQKBgBlRJaecUpeY2TJIakiuycknX4iir0hOge9NUGEq
+cA4/+766WGb73WikuV+LM0GiVXi/u1GUrreY7ISqIIKIuCrqb8/dvxBrGsvura+8
+QpvHUlkkLRRpqeLZScKJaEeV+VBjesL4KRMJHMfBFKw1dRHC9gWYR8TNWM+nVWpT
+K84dAoGAZl4NWM/dUBfLMjSY0iqc484hrxu2mMUlw73bhjxYdNVBe9b/L7Ns9nGr
+//dxNBTyCZeAxAC80EgsH//3OJkyEEL/xZhOulFtplx8VbCWrGiNPvssAxZuSly7
+FXNzz6Z3UaonJBjTooDtrVH8YSHVBg5VoGNYYiZtQU/FrKzen8I=
+-----END RSA PRIVATE KEY-----`;
+
+// Function to encrypt data with the public key
+function encryptMessage (message) {
+const rsa = forge.pki.publicKeyFromPem(publickey):
+const encrypted = rsa.encrypt(message) ;
+return forge.util.encode64 (encrypted) ;
+}
+// Function to decrypt data with the private key
+function decryptMessage (encryptedMessage)
+const rsa= forge.pki.privateKeyFromPem(privatekey) ;
+const decoded = forge.util.decode64(encryptedMessage) ;
+return rsa.decrypt(decoded) ;
+}
+);
+
+</script>
